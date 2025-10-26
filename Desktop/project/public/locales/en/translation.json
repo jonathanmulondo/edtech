@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "lastSync": "Last sync",
+    "metrics": {
+      "solarProduction": "Solar Production",
+      "homeConsumption": "Home Consumption",
+      "grid": "Grid",
+      "battery": "Battery",
+      "exporting": "Exporting",
+      "importing": "Importing"
+    },
+    "chart": {
+      "last24h": "Last 24 Hours",
+      "production": "Production",
+      "consumption": "Consumption"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "forceCharge": "Force Charge",
+      "forceDischarge": "Force Discharge",
+      "stopExport": "Stop Export",
+      "parkPanels": "Park Panels"
+    }
+  },
+  "device": {
+    "title": "Device",
+    "lastSeen": "Last seen",
+    "status": {
+      "online": "Online",
+      "offline": "Offline",
+      "error": "Error",
+      "updating": "Updating"
+    },
+    "telemetry": {
+      "title": "Live Telemetry",
+      "autoRefresh": "Auto-refresh",
+      "panelVoltage": "Panel Voltage",
+      "panelCurrent": "Panel Current",
+      "powerOutput": "Power Output",
+      "motorAngle": "Motor Angle",
+      "temperature": "Temperature"
+    },
+    "motorControl": {
+      "title": "Motor Control",
+      "quickPresets": "Quick Presets",
+      "park": "Park",
+      "optimal": "Optimal",
+      "maxTilt": "Max Tilt",
+      "panelAngle": "Panel Angle",
+      "applyAngle": "Apply Angle",
+      "moving": "Motor moving to {{angle}}°..."
+    },
+    "info": {
+      "title": "Device Information",
+      "deviceId": "Device ID",
+      "type": "Type",
+      "firmwareVersion": "Firmware Version",
+      "updateFirmware": "Update Firmware",
+      "advancedSettings": "Advanced Settings"
+    },
+    "diagnostics": {
+      "title": "Diagnostics & Logs"
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "deviceCode": "Device Code",
+    "signInWithCode": "Sign in with device code"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications"
+  },
+  "sync": {
+    "synced": "Synced",
+    "syncing": "Syncing...",
+    "offline": "Offline",
+    "stale": "Data may be outdated",
+    "pendingActions": "{{count}} pending actions"
+  },
+  "errors": {
+    "noData": "No data available",
+    "networkError": "Network error. Please check your connection.",
+    "actionFailed": "Action failed. Please try again."
+  }
+}

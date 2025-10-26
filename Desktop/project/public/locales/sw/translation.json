@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Kosa",
+    "retry": "Jaribu Tena",
+    "cancel": "Ghairi",
+    "confirm": "Thibitisha",
+    "save": "Hifadhi",
+    "delete": "Futa",
+    "edit": "Hariri",
+    "close": "Funga"
+  },
+  "dashboard": {
+    "title": "Dashibodi",
+    "lastSync": "Usawazishaji wa mwisho",
+    "metrics": {
+      "solarProduction": "Uzalishaji wa Jua",
+      "homeConsumption": "Matumizi ya Nyumbani",
+      "grid": "Gridi",
+      "battery": "Betri",
+      "exporting": "Inatuma",
+      "importing": "Inapokea"
+    },
+    "chart": {
+      "last24h": "Masaa 24 Yaliyopita",
+      "production": "Uzalishaji",
+      "consumption": "Matumizi"
+    },
+    "quickActions": {
+      "title": "Vitendo vya Haraka",
+      "forceCharge": "Chaji Lazima",
+      "forceDischarge": "Toa Chaji Lazima",
+      "stopExport": "Simamisha Kutuma",
+      "parkPanels": "Weka Paneli Salama"
+    }
+  },
+  "device": {
+    "title": "Kifaa",
+    "lastSeen": "Ilionekana mwisho",
+    "status": {
+      "online": "Iko mtandaoni",
+      "offline": "Iko nje ya mtandao",
+      "error": "Kosa",
+      "updating": "Inasasisha"
+    },
+    "telemetry": {
+      "title": "Telemetri ya Moja kwa Moja",
+      "autoRefresh": "Onyesha upya kiotomatiki",
+      "panelVoltage": "Volteji ya Paneli",
+      "panelCurrent": "Mkondo wa Paneli",
+      "powerOutput": "Pato la Nguvu",
+      "motorAngle": "Pembe ya Mota",
+      "temperature": "Joto"
+    },
+    "motorControl": {
+      "title": "Udhibiti wa Mota",
+      "quickPresets": "Mipangilio ya Haraka",
+      "park": "Weka Salama",
+      "optimal": "Bora",
+      "maxTilt": "Mteremko wa Juu",
+      "panelAngle": "Pembe ya Paneli",
+      "applyAngle": "Tumia Pembe",
+      "moving": "Mota inahamia {{angle}}°..."
+    },
+    "info": {
+      "title": "Taarifa za Kifaa",
+      "deviceId": "Kitambulisho cha Kifaa",
+      "type": "Aina",
+      "firmwareVersion": "Toleo la Firmware",
+      "updateFirmware": "Sasisha Firmware",
+      "advancedSettings": "Mipangilio ya Kina"
+    },
+    "diagnostics": {
+      "title": "Uchunguzi na Kumbukumbu"
+    }
+  },
+  "auth": {
+    "signIn": "Ingia",
+    "email": "Barua pepe",
+    "password": "Nywila",
+    "forgotPassword": "Umesahau Nywila?",
+    "deviceCode": "Nambari ya Kifaa",
+    "signInWithCode": "Ingia kwa kutumia nambari ya kifaa"
+  },
+  "settings": {
+    "title": "Mipangilio",
+    "account": "Akaunti",
+    "language": "Lugha",
+    "theme": "Mandhari",
+    "notifications": "Arifa"
+  },
+  "sync": {
+    "synced": "Imesawazishwa",
+    "syncing": "Inasawazisha...",
+    "offline": "Nje ya mtandao",
+    "stale": "Data inaweza kuwa ya zamani",
+    "pendingActions": "Vitendo {{count}} vinasubiri"
+  },
+  "errors": {
+    "noData": "Hakuna data inapatikana",
+    "networkError": "Kosa la mtandao. Tafadhali angalia muunganisho wako.",
+    "actionFailed": "Kitendo kimeshindwa. Tafadhali jaribu tena."
+  }
+}

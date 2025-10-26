@@ -1,0 +1,104 @@
+{
+  "siteSummary": {
+    "siteId": "site_123",
+    "name": "Mulondo Residence",
+    "timezone": "Africa/Nairobi",
+    "location": {
+      "lat": -1.2921,
+      "lon": 36.8219,
+      "address": "Nairobi, Kenya"
+    },
+    "lastSync": "2025-10-25T12:34:56Z",
+    "current": {
+      "solarW": 1520,
+      "homeW": 900,
+      "battery": {
+        "soc": 68,
+        "powerW": -200,
+        "voltage": 51.2,
+        "current": 3.9,
+        "temperature": 28,
+        "timeToFull": 120,
+        "timeToEmpty": 340
+      },
+      "gridW": -420
+    },
+    "alarms": [
+      {
+        "id": "alarm_1",
+        "level": "warn",
+        "text": "Battery temperature slightly elevated (28°C)",
+        "timestamp": "2025-10-25T12:30:00Z",
+        "acknowledged": false
+      }
+    ],
+    "devices": [
+      {
+        "deviceId": "dev_001",
+        "type": "solar-tracker",
+        "name": "Solar Tracker #1",
+        "status": "online",
+        "firmwareVersion": "2.1.4",
+        "lastSeen": "2025-10-25T12:34:56Z",
+        "capabilities": {
+          "motorControl": true,
+          "remoteControl": true,
+          "dataLogging": true
+        }
+      },
+      {
+        "deviceId": "dev_002",
+        "type": "inverter",
+        "name": "Main Inverter",
+        "status": "online",
+        "firmwareVersion": "3.2.1",
+        "lastSeen": "2025-10-25T12:34:55Z"
+      },
+      {
+        "deviceId": "dev_003",
+        "type": "battery",
+        "name": "Battery Bank",
+        "status": "online",
+        "firmwareVersion": "1.8.3",
+        "lastSeen": "2025-10-25T12:34:54Z"
+      }
+    ]
+  },
+  "timeSeriesDay": [
+    { "ts": 1729846800000, "productionW": 0, "consumptionW": 450, "batteryW": 450, "gridW": 0, "soc": 68 },
+    { "ts": 1729850400000, "productionW": 120, "consumptionW": 480, "batteryW": 360, "gridW": 0, "soc": 66 },
+    { "ts": 1729854000000, "productionW": 580, "consumptionW": 520, "batteryW": -60, "gridW": 0, "soc": 67 },
+    { "ts": 1729857600000, "productionW": 1200, "consumptionW": 600, "batteryW": -400, "gridW": -200, "soc": 70 },
+    { "ts": 1729861200000, "productionW": 1680, "consumptionW": 750, "batteryW": -600, "gridW": -330, "soc": 75 },
+    { "ts": 1729864800000, "productionW": 1520, "consumptionW": 900, "batteryW": -200, "gridW": -420, "soc": 78 },
+    { "ts": 1729868400000, "productionW": 1340, "consumptionW": 820, "batteryW": -300, "gridW": -220, "soc": 80 },
+    { "ts": 1729872000000, "productionW": 920, "consumptionW": 780, "batteryW": -140, "gridW": 0, "soc": 81 },
+    { "ts": 1729875600000, "productionW": 320, "consumptionW": 650, "batteryW": 330, "gridW": 0, "soc": 79 },
+    { "ts": 1729879200000, "productionW": 0, "consumptionW": 720, "batteryW": 720, "gridW": 0, "soc": 76 },
+    { "ts": 1729882800000, "productionW": 0, "consumptionW": 580, "batteryW": 580, "gridW": 0, "soc": 73 },
+    { "ts": 1729886400000, "productionW": 0, "consumptionW": 420, "batteryW": 420, "gridW": 0, "soc": 71 }
+  ],
+  "timeSeriesWeek": [
+    { "ts": 1729209600000, "productionW": 4200, "consumptionW": 3800, "batteryW": -300, "gridW": -100, "soc": 72 },
+    { "ts": 1729296000000, "productionW": 4500, "consumptionW": 3900, "batteryW": -400, "gridW": -200, "soc": 75 },
+    { "ts": 1729382400000, "productionW": 3800, "consumptionW": 4100, "batteryW": 200, "gridW": 100, "soc": 68 },
+    { "ts": 1729468800000, "productionW": 4300, "consumptionW": 3700, "batteryW": -500, "gridW": -100, "soc": 74 },
+    { "ts": 1729555200000, "productionW": 4700, "consumptionW": 3600, "batteryW": -800, "gridW": -300, "soc": 80 },
+    { "ts": 1729641600000, "productionW": 4100, "consumptionW": 3900, "batteryW": -200, "gridW": 0, "soc": 77 },
+    { "ts": 1729728000000, "productionW": 4400, "consumptionW": 3800, "batteryW": -400, "gridW": -200, "soc": 79 }
+  ],
+  "energyInsights": {
+    "period": "month",
+    "totalProduction": 128.5,
+    "totalConsumption": 112.3,
+    "totalExport": 24.8,
+    "totalImport": 8.6,
+    "selfConsumption": 92.3,
+    "co2Saved": 96.4,
+    "cost": {
+      "saved": 4520,
+      "earned": 1240,
+      "currency": "KES"
+    }
+  }
+}

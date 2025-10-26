@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(npm install:*)",
+      "Bash(vercel --yes)",
+      "Bash(vercel login)",
+      "Bash(vercel:*)",
+      "Bash(npm run build:*)",
+      "Bash(tree:*)",
+      "Bash(git commit:*)",
+      "Bash(npx vercel:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

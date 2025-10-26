@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Custom Properties for runtime theming */
+@layer base {
+  :root {
+    --color-primary: 245 158 11; /* #f59e0b in RGB */
+    --color-accent: 20 184 166;
+    --color-background: 255 255 255;
+    --color-surface: 249 250 251;
+    --color-surface-border: 229 231 235;
+    --color-text-primary: 17 24 39;
+    --color-text-secondary: 107 114 128;
+    --color-text-muted: 156 163 175;
+    --color-success: 16 185 129;
+    --color-danger: 239 68 68;
+    --color-warning: 245 158 11;
+  }
+
+  /* Dark Slate theme (default dark mode) */
+  .dark {
+    --color-primary: 251 191 36;
+    --color-accent: 45 212 191;
+    --color-background: 15 23 42;
+    --color-surface: 30 41 59;
+    --color-surface-border: 71 85 105;
+    --color-text-primary: 241 245 249;
+    --color-text-secondary: 203 213 225;
+    --color-text-muted: 148 163 184;
+    --color-success: 52 211 153;
+    --color-danger: 248 113 113;
+    --color-warning: 251 191 36;
+  }
+
+  /* Pure Dark theme (login page inspired) */
+  .dark-pure {
+    --color-primary: 163 230 53; /* lime-400 */
+    --color-accent: 34 197 94; /* green-500 */
+    --color-background: 10 10 10; /* #0a0a0a */
+    --color-surface: 26 26 26; /* #1a1a1a */
+    --color-surface-border: 31 41 55; /* gray-800 */
+    --color-text-primary: 255 255 255; /* white */
+    --color-text-secondary: 209 213 219; /* gray-300 */
+    --color-text-muted: 156 163 175; /* gray-400 */
+    --color-success: 34 197 94; /* green-500 */
+    --color-danger: 239 68 68; /* red-500 */
+    --color-warning: 163 230 53; /* lime-400 */
+  }
+
+  * {
+    @apply border-surface-border;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    /* Prevent text size adjustment on orientation change (mobile) */
+    -webkit-text-size-adjust: 100%;
+    /* Improve font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* iOS smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent pull-to-refresh on mobile */
+    overscroll-behavior-y: contain;
+  }
+
+  /* Dark Slate background */
+  .dark-slate body {
+    @apply bg-dark-bg text-dark-text;
+  }
+
+  /* Pure Dark background */
+  .dark-pure body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+
+  /* Focus visible styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500 dark:outline-primary-400;
+  }
+
+  /* Remove focus outline when using mouse */
+  *:focus:not(:focus-visible) {
+    @apply outline-none;
+  }
+
+  /* Ensure headings are bold and properly sized - Mobile optimized */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h2 {
+    @apply text-lg md:text-xl;
+  }
+
+  h3 {
+    @apply text-base md:text-lg;
+  }
+
+  /* Base font size reduction for mobile */
+  html {
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Skeleton loader for loading states */
+  .skeleton {
+    @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+  }
+
+  /* Responsive container with safe area insets (mobile notches) */
+  .safe-container {
+    @apply px-4 md:px-6;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  /* Metric card grid layout */
+  .metric-grid {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4;
+  }
+}
+
+@layer utilities {
+  /* Text utility for truncation with ellipsis */
+  .text-ellipsis {
+    @apply truncate;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 dark:bg-dark-surface/80 backdrop-blur-md;
+  }
+
+  /* iOS touch feedback */
+  .ios-touch {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Smooth scrolling for iOS */
+  .ios-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+}
