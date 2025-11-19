@@ -93,6 +93,17 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
+// Middleware to ensure database is connected (for serverless)
+app.use(async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error('Database connection error:', error);
+    res.status(503).json({ error: 'Service temporarily unavailable' });
+  }
+});
+
 // Export app for Vercel serverless
 export default app;
 
