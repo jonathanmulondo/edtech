@@ -93,23 +93,26 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
-
-// Connect to database and start server
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log('');
-    console.log('🚀 ===================================');
-    console.log(`🚀  EngiLearn Backend Server`);
-    console.log(`🚀  Port: ${PORT}`);
-    console.log(`🚀  Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`🚀  API: http://localhost:${PORT}/api/v1`);
-    console.log('🚀 ===================================');
-    console.log('');
-  });
-}).catch((error) => {
-  console.error('Failed to start server:', error);
-  process.exit(1);
-});
-
+// Export app for Vercel serverless
 export default app;
+
+// Only start server if not in serverless environment
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const PORT = process.env.PORT || 5000;
+
+  connectDB().then(() => {
+    app.listen(PORT, () => {
+      console.log('');
+      console.log('🚀 ===================================');
+      console.log(`🚀  EngiLearn Backend Server`);
+      console.log(`🚀  Port: ${PORT}`);
+      console.log(`🚀  Environment: ${process.env.NODE_ENV || 'development'}`);
+      console.log(`🚀  API: http://localhost:${PORT}/api/v1`);
+      console.log('🚀 ===================================');
+      console.log('');
+    });
+  }).catch((error) => {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  });
+}
